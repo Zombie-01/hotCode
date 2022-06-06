@@ -6,7 +6,7 @@
 
 ## Get started
 
-git clone <br/>
+git clone https://github.com/Zombie-01/hotCode.git<br/>
 npm install <br/>
 npm install -g win-node-env <br/>
 npm run dev
