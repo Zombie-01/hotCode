@@ -51,7 +51,7 @@ export default function Profile(): JSX.Element {
               />
               {
                 followers ?? <span className={ followersPlaceholder } />
-              } Followers
+              } Хандив өгсөн
             </h3>
           </div>
         </div>

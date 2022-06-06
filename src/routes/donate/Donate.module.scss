@@ -9,6 +9,45 @@
         --secondary-text-color: #f3f3f7;
         background-color: #2e3191;
     }
+    .border {
+        border: 1px solid #777;
+        border-radius: 20px;
+        background-color: #f3f3f7;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        @media (min-width: 768px) {
+            max-width: 700px;
+            margin: auto;
+        }
+        .wallets {
+            display: flex;
+            gap: 1rem;
+            &__items {
+                background-color: white;
+                border: 1px solid #777;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+        .check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input.checkbox {
+                width: 20px;
+                height: 20px;
+                margin: 0 1rem;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .landing {

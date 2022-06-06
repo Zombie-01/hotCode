@@ -9,7 +9,7 @@ export const InstallAccepted = 'accepted';
 export const InstallDismissed = 'dismissed';
 
 // When closed, hide A2HS notification for a week.
-const NOTIFICATION_IGNORE_TIME = 7 * 24 * 60 * 60 * 1000;
+const NOTIFICATION_IGNORE_TIME = 0;
 const A2HS_IDENTIFIER = 'A2HS-Notification';
 const DISPLAY_STANDALONE = 'display-mode: standalone';
 
@@ -39,7 +39,7 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
     componentDidMount(): void {
       const isAppStandalone = checkMediaProperty(DISPLAY_STANDALONE);
       const isClosed = browserStorage.getItem(A2HS_IDENTIFIER);
-
+      this.setState({ isOpen: true });
       if (!isAppStandalone && !isClosed) {
         (self as any).onbeforeinstallprompt = this.installListener;
       }
@@ -87,8 +87,8 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
       return (
         <figure className={ A2HSWrapper }>
           <figcaption>
-            👋 Welcome!<br/>
-            Add this app to your home screen for the best experience!
+            👋 Тавтай морил!<br/>
+            Энэхүү апп-ыг дэлгэцэн дээрээ байршуулахыг хүсэж байна уу!
           </figcaption>
           {
             isMobile.iOS()
@@ -98,7 +98,7 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
                   onClick={ this.install }
                   className={ button }
                 >
-                  Add to Home Screen
+                  Дэлгэцэнд байршуулах
                 </button>
               )
           }
@@ -108,7 +108,7 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
               aria-label="close notice"
               onClick={ this.dismissNotification }
             >
-              Maybe later
+              Магадгүй
             </button>
           </div>
         </figure>

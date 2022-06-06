@@ -10,9 +10,10 @@ const {
 } = styles;
 
 const links = [
-  { name: 'Home', url: '/', alias: [] },
-  { name: 'Pages', url: '/pages', alias: ['/[page]'] },
-  { name: 'Profile', url: '/profile', alias: [] }
+  { name: 'Нүүр', url: '/', alias: [] },
+  { name: 'Мэдээлэл', url: '/pages', alias: ['/[page]'] },
+  { name: 'Хандивлах', url: '/donate', alias: [] },
+  { name: 'Пропайл', url: '/profile', alias: [] }
 ];
 
 export default function Items(): JSX.Element {
