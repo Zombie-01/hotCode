@@ -6,8 +6,8 @@
 
 ## Get started
 
-git clone 
-npm install
-npm install -g win-node-env
+git clone <br/>
+npm install <br/>
+npm install -g win-node-env <br/>
 npm run dev
 
