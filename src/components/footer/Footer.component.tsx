@@ -3,7 +3,8 @@ import styles from './Footer.module.scss';
 
 const {
   footer,
-  main
+  main,
+  end
 } = styles;
 
 export default function Footer(): JSX.Element {
@@ -13,33 +14,38 @@ export default function Footer(): JSX.Element {
         <section>
           <h3>Бид</h3>
           <ul>
-            <li>lorem</li>
-            <li>lorem</li>
-            <li>lorem</li>
-            <li>lorem</li>
-            <li>lorem</li>
+            <li>TechUp баг</li>
+            <br/>
+            <li>Э. Мөнхжавхлан багийн ахлах</li>
+            <li>Б. Шижирбум багийн гишүүн</li>
+            <li>Б Адъяадорж багийн гишүүн</li>
           </ul>
         </section>
         <section>
           <h3>Хамтран ажлагсад</h3>
           <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo iste quibusdam dicta. Dicta perspiciatis in recusandae, cupiditate et mollitia!</li>
+            <li>Нийгмийн хариуцлагийн хүрээнд бидэндтэй хамтран ажиллаж байгаа байглууллагууд.<br/>
+            - Y4RP family<br/>
+            - TechUp баг</li>
           </ul>
         </section>
         <section>
           <h3>Холбоо барих</h3>
           <ul>
-            <li>утас +976 94311521</li>
-            <li>майл mm6816557@gmail.com</li>
+            <li>Утас: +976 94311521</li>
+            <li>Майл: igen2023@gmail.com</li>
+            <li>Хаяг: 1129 Marcus Street</li>
           </ul>
         </section>
       </footer>
       <h3>
-         Хамтран ажилсанд баярлалаа
-        <a href="facebook.com">+</a>
-        <a href="instagram.com">+</a>
-        <a href="youtube.com">+</a>
+          Хамтран ажилсанд баярлалаа 
       </h3>
+      <div className={ end }>
+        <a href="https://www.facebook.com/">facebook</a>
+        <a href="https://www.instagram.com/">instagram</a>
+        <a href="https://www.youtube.com/">youtube</a>
+      </div>
     </div>
   );
 }

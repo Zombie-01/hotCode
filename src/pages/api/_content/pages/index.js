@@ -1,9 +1,15 @@
 import home from './home.html';
-import whyPwa from './why-pwa.html';
-import getStarted from './get-started.html';
+import daatgal from './daatgal.html';
+import forKids from './for.html';
+import comments from './comments.html';
+import events from './events.html';
+import together from './together.html';
 
 export default {
+  'forKids': forKids,
   'home': home,
-  'why-pwa': whyPwa,
-  'get-started': getStarted
+  'daatgal': daatgal,
+  'comments': comments,
+  'events': events,
+  'together': together
 };

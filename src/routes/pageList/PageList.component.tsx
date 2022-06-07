@@ -13,14 +13,12 @@ export default function PageList(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Page List</title>
+        <title>Мэдээ мэдээлэл</title>
       </Head>
       <main className={ pageList }>
-        <h1>Pages</h1>
+        <h1>Мэдээ мэдээлэл</h1>
         <p>
-                    Do you also think this lack of content looks sad?<br />
-                    Feel free to contribute by going to our GitHub repo and creating a pull-request,<br />
-                    we would greatly appreciate it!
+            Шилэн данс, эрүүл мэндийн даатгалын тухай мэдээлэл, бидний цаашдийн үйл ажиллагаа болон бидэнд ирсэн эерэг сэтгэгдлүүдийг эндээс унших боломжтой
         </p>
         <Pages className={ pageListContainer }>
           <li><Placeholder length="medium" /></li>
