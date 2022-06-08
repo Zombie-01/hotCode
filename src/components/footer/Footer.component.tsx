@@ -22,7 +22,7 @@ export default function Footer(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h3>Хамтран ажлагсад</h3>
+          <h3>Хамтран ажиллагсад</h3>
           <ul>
             <li>Нийгмийн хариуцлагийн хүрээнд бидэндтэй хамтран ажиллаж байгаа байглууллагууд.<br/>
             - Y4RP family<br/>

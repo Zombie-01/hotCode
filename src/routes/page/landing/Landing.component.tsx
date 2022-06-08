@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'components/image';
 import styles from './Landing.module.scss';
 
@@ -27,13 +28,7 @@ export default function Landing(): JSX.Element {
             </p>
           </div>
           <div className={ landingNavigationWrapper }>
-            <a
-              href="donate"
-              target="_blank"
-              rel="noreferrer"
-            >
-            хандив өгөх
-            </a>
+            <Link href="/donate">Хандив өгөх</Link>
             <p>Таний багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
           </div>
           <Image

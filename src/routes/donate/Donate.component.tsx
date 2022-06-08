@@ -59,7 +59,7 @@ export default function Donate(): JSX.Element {
     setLastDirection(direction);
   };
 
-  const outOfFrame = (name:any) => {
+  const outOfFrame = ( name:any ) => {
     console.log(name + ' left !');
   };
   return (
@@ -68,7 +68,6 @@ export default function Donate(): JSX.Element {
         <title>Хандив</title>
       </Head>
       <div className={ doante }>
-        <h1>React Tinder Card</h1>
         <div className={ cardContainer }>
           { characters.map(character =>
             <TinderCard className={ swipe } key={ character.name } onSwipe={ dir => swiped(dir, character.name) } onCardLeftScreen={ () => outOfFrame(character.name) }>
