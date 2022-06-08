@@ -28,7 +28,7 @@ export default function Landing(): JSX.Element {
           </div>
           <div className={ landingNavigationWrapper }>
             <a
-              href="https://github.com/tomburgs/pwa-boilerplate"
+              href="donate"
               target="_blank"
               rel="noreferrer"
             >
