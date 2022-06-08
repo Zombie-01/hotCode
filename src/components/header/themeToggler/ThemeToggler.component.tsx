@@ -89,7 +89,7 @@ export default function ThemeToggler(): JSX.Element {
               onChange={ onToggleTheme }
               disabled={ isSystemThemeUsed }
             />
-            <label htmlFor={ DARK_MODE_SETTING }>Use Dark Mode</label>
+            <label htmlFor={ DARK_MODE_SETTING }>Харанхуй горим</label>
           </li>
           <li>
             <Switch
@@ -97,7 +97,7 @@ export default function ThemeToggler(): JSX.Element {
               checked={ isSystemThemeUsed }
               onChange={ onToggleSystemTheme }
             />
-            <label htmlFor={ SYSTEM_THEME_SETTING }>Use System Theme</label></li>
+            <label htmlFor={ SYSTEM_THEME_SETTING }>Гэгээлэг горим</label></li>
         </ul>
       </div>
     </>
