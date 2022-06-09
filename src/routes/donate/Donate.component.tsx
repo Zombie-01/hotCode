@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import TinderCard from 'react-tinder-card';
+import { useRouter } from 'next/router';
 import styles from './Donate.module.scss';
 
 const {
@@ -51,16 +52,25 @@ const db = [
 ];
 
 export default function Donate(): JSX.Element {
+  const router = useRouter();
   const characters = db;
   const [lastDirection, setLastDirection] = useState();
 
   const swiped = (direction: any, nameToDelete: any) => {
-    console.log('removing: ' + nameToDelete);
-    setLastDirection(direction);
+    if(direction === 'left'){
+      router.push('leftlist');
+    }
+    if(direction === 'up'){
+      router.push('uplist');
+    }
+    if(direction === 'right'){
+      console.log(nameToDelete);
+    }
   };
 
-  const outOfFrame = ( name:any ) => {
-    console.log(name + ' left !');
+  const outOfFrame = (name:any) => {
+    console.log("asd");
+    
   };
   return (
     <>

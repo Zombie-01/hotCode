@@ -23,7 +23,7 @@ export default function Landing(): JSX.Element {
           <div className={ landingText }>
             <h1>Бяцхан зүрхний баатар</h1>
             <p>
-              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохьлох зүрх бүхний төлөө.<br />
+              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.<br />
               Та ч гэсэн баатар болж чадна.
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function Landing(): JSX.Element {
           <Image
             className={ landingImage }
             src="/assets/landing.png"
-            alt="Desktop & Mobile PWA Application"
+            alt="child"
             width="450px"
             height="310px"
           />
