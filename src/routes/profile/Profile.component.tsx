@@ -56,17 +56,9 @@ export default function Profile(): JSX.Element {
           </div>
         </div>
         <div className={ about }>
-          <h2>About</h2>
+          <h2>Талархал</h2>
           <p>
-                        Aliquam aliquet tempus metus et varius.
-                        Etiam convallis nunc at magna venenatis, vitae egestas nibh accumsan.
-                        Nam auctor neque eget odio pretium, non lobortis sem condimentum.
-                        Vestibulum tempus risus vel est tristique, sed malesuada leo facilisis.
-                        Etiam sagittis leo eget augue ullamcorper sagittis.
-                        Fusce efficitur convallis turpis, sed faucibus diam lobortis ac.
-                        Morbi tincidunt purus tincidunt, maximus est vitae, semper erat.
-                        Pellentesque dictum in nunc eu porttitor.
-                        Integer vitae justo sit amet metus malesuada eleifend.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique, inventore quos fugit enim itaque facilis voluptates minus ut odio veritatis, at, dignissimos commodi veniam nihil sequi necessitatibus? Dolorum dolores quo rem adipisci enim. Similique tenetur repellat consequatur, possimus, nihil nam perspiciatis impedit unde inventore tempora sint pariatur! Reprehenderit, inventore.
           </p>
         </div>
       </main>

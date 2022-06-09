@@ -6,27 +6,6 @@ const {
 const generateSitemap = require("./generateSitemap");
 const root = process.cwd();
 
-/*
- * Include a list of async functions that will get called to generate a sitemap.
- * Each function should return an array of objects, including the required fields by the sitemap protocol.
- * https://www.sitemaps.org/protocol.html
- *
- * Example return value:
- * [
- *  {
- *      loc: 'https://pwa-boilerplate.com/', // Required
- *      lastmod: '1917-11-18', // Optional
- *      changefreq: 'monthly', // Optional
- *      priority: '0.7' // Optional (defaults to 0.5)
- *  }
- * ]
- */
-
-/*
- * Add the default next.js pages.
- *
- * Ignores api directory and anything that starts with _, [ or .
- */
 const addStaticPages = async({ baseUrl, skipIndex }) => {
     const getDirents = (path) => fs.readdir(path, { withFileTypes: true });
 
