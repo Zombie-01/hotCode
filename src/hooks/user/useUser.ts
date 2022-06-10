@@ -9,7 +9,7 @@ const useUser = (): User => {
 
   useEffect(() => {
     if (!user.name) {
-      dispatch(getUser('tomburgs'));
+      dispatch(getUser('Zombie-01'));
     }
   }, []);
 

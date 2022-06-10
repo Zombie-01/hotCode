@@ -7,4 +7,25 @@
         max-width: 800px;
         padding: 0 1rem;
     }
+    .cardContainer {
+        width: 90vw;
+        max-width: 260px;
+        min-height: 500px;
+        margin: 5rem auto auto auto;
+        .swipe {
+            position: absolute;
+            .card {
+                position: relative;
+                width: 80vw;
+                max-width: 260px;
+                height: 400px;
+                color: black;
+                background-color: antiquewhite;
+                box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+                border-radius: 20px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
 }

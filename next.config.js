@@ -1,15 +1,15 @@
-const WorkboxPlugin = require('workbox-webpack-plugin');
-const generateSitemap = require('./scripts/sitemap');
-const crypto = require('crypto');
-const fs = require('fs');
-const path = require('path');
+const WorkboxPlugin = require("workbox-webpack-plugin");
+const generateSitemap = require("./scripts/sitemap");
+const crypto = require("crypto");
+const fs = require("fs");
+const path = require("path");
 
-const baseUrl = 'https://pwa-boilerplate.com';
+const baseUrl = "https://pwa-boilerplate.com";
 
-const sitemapDest = path.resolve('.next/static');
-const skipIndex = ['/profile'];
+const sitemapDest = path.resolve(".next/static");
+const skipIndex = ["/profile"];
 
-const serviceWorkerPath = 'static/sw.js';
+const serviceWorkerPath = "static/sw.js";
 const serviceWorkerUrl = `/_next/${serviceWorkerPath}`;
 const serviceWorkerDest = `.next/${serviceWorkerPath}`;
 
@@ -17,32 +17,31 @@ module.exports = {
     webpack5: true,
     reactStrictMode: true,
     env: {
-        serviceWorkerUrl
+        serviceWorkerUrl,
     },
-    pageExtensions: ['ts', 'tsx'],
+    pageExtensions: ["ts", "tsx"],
     excludeFile: (str) => /\/src\/sw\/.*/.test(str),
     webpack: (config, { isServer, dev, webpack, buildId }) => {
-        config.module.rules.push(
-            {
-                test: /\.svg$/,
-                loader: '@svgr/webpack'
-            },
-            {
-                test: /\.html$/,
-                loader: 'raw-loader'
-            }
-        );
+        config.module.rules.push({
+            test: /\.svg$/,
+            loader: "@svgr/webpack",
+        }, {
+            test: /\.html$/,
+            loader: "raw-loader",
+        });
 
         if (isServer && !dev) {
             generateSitemap({
-                baseUrl,
-                skipIndex
-            }, sitemapDest);
+                    baseUrl,
+                    skipIndex,
+                },
+                sitemapDest
+            );
         }
 
         if (!isServer) {
             const additionalManifestEntries = fs
-                .readdirSync('public', { withFileTypes: true })
+                .readdirSync("public", { withFileTypes: true })
                 /*
                  * Add the public files to precache-manifest entries.
                  *
@@ -54,7 +53,7 @@ module.exports = {
                     const { name } = file;
 
                     // Filter out directories and hidden files.
-                    if (!file.isFile() || name.startsWith('.')) {
+                    if (!file.isFile() || name.startsWith(".")) {
                         return manifest;
                     }
 
@@ -62,32 +61,30 @@ module.exports = {
                         ...manifest,
                         {
                             url: `/${name}`,
-                            revision: crypto.createHash('md5').update(
-                                Buffer.from(
-                                    fs.readFileSync(`public/${name}`)
-                                )
-                            ).digest('hex')
-                        }
+                            revision: crypto
+                                .createHash("md5")
+                                .update(Buffer.from(fs.readFileSync(`public/${name}`)))
+                                .digest("hex"),
+                        },
                     ];
                 }, []);
 
             /*
              * In development mode pre-cache files up-to 5MB
              */
-            const maximumFileSizeToCacheInBytes = dev
-                ? 5000000 : undefined;
+            const maximumFileSizeToCacheInBytes = dev ? 5000000 : undefined;
 
             config.plugins.push(
                 new WorkboxPlugin.InjectManifest({
-                    swSrc: path.resolve('src', 'sw', 'index.ts'),
+                    swSrc: path.resolve("src", "sw", "index.ts"),
                     swDest: path.resolve(serviceWorkerDest),
                     dontCacheBustURLsMatching: /^\/_next\/static\//,
                     maximumFileSizeToCacheInBytes,
                     additionalManifestEntries,
                     webpackCompilationPlugins: [
                         new webpack.DefinePlugin({
-                            'self.__BUILD_ID': JSON.stringify(buildId)
-                        })
+                            "self.__BUILD_ID": JSON.stringify(buildId),
+                        }),
                     ],
                     exclude: [
                         /*
@@ -107,11 +104,11 @@ module.exports = {
                          * otherwise we're downloading both
                          * variable & regular fonts.
                          */
-                        /\.(ttf|woff)/i
+                        /\.(ttf|woff)/i,
                     ],
                     modifyURLPrefix: {
-                        'static/': '/_next/static/'
-                    }
+                        "static/": "/_next/static/",
+                    },
                 })
             );
         }
@@ -127,8 +124,8 @@ module.exports = {
          */
         source: serviceWorkerUrl,
         headers: [{
-            key: 'service-worker-allowed',
-            value: '/'
-        }]
-    }]
-}
+            key: "service-worker-allowed",
+            value: "/",
+        }, ],
+    }, ],
+};

@@ -3,3 +3,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://pwa-boilerplate.com/_next/static/sitemap.xml
+

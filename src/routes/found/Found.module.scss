@@ -1,0 +1,27 @@
+.mainFound {
+    margin: auto;
+    padding-top: 5rem;
+    width: fit-content;
+    padding-bottom: 1rem;
+    div {
+        display: flex;
+        gap: 1rem;
+        section {
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 0 0 1rem 0;
+            &:first-child {
+                border: 1px solid yellowgreen;
+            }
+            &:last-child {
+                border: 1px solid pink;
+            }
+        }
+    }
+    .save {
+        border: 1px solid skyblue;
+        border-radius: 10px;
+        text-align: center;
+        padding: 1rem;
+    }
+}

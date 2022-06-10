@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'components/image';
 import styles from './Landing.module.scss';
 
@@ -22,24 +23,18 @@ export default function Landing(): JSX.Element {
           <div className={ landingText }>
             <h1>Бяцхан зүрхний баатар</h1>
             <p>
-              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохьлох зүрх бүхний төлөө.<br />
+              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.<br />
               Та ч гэсэн баатар болж чадна.
             </p>
           </div>
           <div className={ landingNavigationWrapper }>
-            <a
-              href="https://github.com/tomburgs/pwa-boilerplate"
-              target="_blank"
-              rel="noreferrer"
-            >
-            хандив өгөх
-            </a>
+            <Link href="/donate">Хандив өгөх</Link>
             <p>Таний багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
           </div>
           <Image
             className={ landingImage }
             src="/assets/landing.png"
-            alt="Desktop & Mobile PWA Application"
+            alt="child"
             width="450px"
             height="310px"
           />

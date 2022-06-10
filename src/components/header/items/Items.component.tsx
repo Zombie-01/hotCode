@@ -12,7 +12,7 @@ const {
 const links = [
   { name: 'Нүүр', url: '/', alias: [] },
   { name: 'Мэдээлэл', url: '/pages', alias: ['/[page]'] },
-  { name: 'Хандивлах', url: '/donate', alias: [] },
+  { name: 'Хандив', url: '/found', alias: [] },
   { name: 'Пропайл', url: '/profile', alias: [] }
 ];
 
