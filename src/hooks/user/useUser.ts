@@ -12,6 +12,7 @@ const useUser = (): User => {
       dispatch(getUser('Zombie-01'));
     }
   }, []);
+  // asd
 
   return user;
 };
