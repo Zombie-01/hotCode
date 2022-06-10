@@ -10,11 +10,13 @@ import { getWindowProperty } from 'utils/browser';
 import { user } from 'stores/user';
 import { notifications } from 'stores/notifications';
 import { pages } from 'stores/pages';
+import { item } from 'stores/save';
 
 const reducers = combineReducers({
   user,
   notifications,
-  pages
+  pages,
+  item
 });
 
 export type RootState = ReturnType<typeof reducers>

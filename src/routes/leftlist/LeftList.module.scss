@@ -5,18 +5,36 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
+    height: fit-content;
     .listitem {
         padding: 1rem;
-        height: fit-content;
+        height: min-content;
         border: 1px solid #777;
         border-radius: 5px;
         display: flex;
         gap: 1rem;
         .img {
-            width: 100px !important;
+            width: 120px !important;
             height: auto;
             background-color: aquamarine;
             border-radius: 10px;
+        }
+        .costStyle {
+            width: 10px;
+            height: 80px;
+            border: 1px solid #DDD;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            .before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 60%;
+                border-radius: 5px;
+                background-color: aqua;
+                bottom: 0;
+            }
         }
     }
     @media (min-width: 768px) {

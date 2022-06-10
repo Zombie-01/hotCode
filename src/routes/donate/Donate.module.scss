@@ -14,6 +14,8 @@
         margin: 5rem auto auto auto;
         .swipe {
             position: absolute;
+            display: flex;
+            gap: 1rem;
             .card {
                 position: relative;
                 width: 80vw;
@@ -25,6 +27,31 @@
                 border-radius: 20px;
                 background-size: cover;
                 background-position: center;
+            }
+            .costDiv {
+                h3 {
+                    width: 50px;
+                    text-align: left;
+                    background-color: #f3f3f7;
+                    padding: 0.23rem;
+                }
+            }
+            .costStyle {
+                width: 10px;
+                background-color: #f3f3f7;
+                height: 330px;
+                border: 1px solid #ddd;
+                position: relative;
+                border-radius: 5px;
+                .before {
+                    content: "";
+                    position: absolute;
+                    background-color: aqua;
+                    border-radius: 5px;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                }
             }
         }
     }

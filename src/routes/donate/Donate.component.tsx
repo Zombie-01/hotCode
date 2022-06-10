@@ -9,45 +9,66 @@ const {
   cardContainer,
   card,
   swipe,
-  infoText
+  infoText,
+  costStyle,
+  costDiv,
+  before
 } = styles;
 
 const db = [
   {
     name: 'Zombie_1',
-    url: './img/richard.jpg'
+    url: './img/richard.jpg',
+    goal: '100$',
+    cost: 60
   },
   {
     name: 'Zombie_2',
-    url: './img/erlich.jpg'
+    url: './img/erlich.jpg',
+    goal: '1000$',
+    cost: 70
   },
   {
     name: 'Zombie_3',
-    url: './img/monica.jpg'
+    url: './img/monica.jpg',
+    goal: '1000$',
+    cost: 80
   },
   {
     name: 'Zombie_4',
-    url: './img/jared.jpg'
+    url: './img/jared.jpg',
+    goal: '10000$',
+    cost: 60
   },
   {
     name: 'Zombie_5',
-    url: './img/jared.jpg'
+    url: './img/jared.jpg',
+    goal: '15000$',
+    cost: 65
   },
   {
     name: 'Zombie_6',
-    url: './img/jared.jpg'
+    url: './img/jared.jpg',
+    goal: '2000$',
+    cost: 10
   },
   {
     name: 'Zombie_7',
-    url: './img/jared.jpg'
+    url: './img/jared.jpg',
+    goal: '5000$',
+    cost: 15
   },
   {
     name: 'Zombie_8',
-    url: './img/jared.jpg'
+    url: './img/jared.jpg',
+    goal: '600$',
+    cost: 25
   },
   {
     name: 'Zombie_9',
-    url: './img/dinesh.jpg'
+    url: './img/dinesh.jpg',
+    goal: '300$',
+    cost: 35
   }
 ];
 
@@ -69,7 +90,7 @@ export default function Donate(): JSX.Element {
   };
 
   const outOfFrame = (name:any) => {
-    console.log("asd");
+    console.log('asd');
     
   };
   return (
@@ -83,6 +104,12 @@ export default function Donate(): JSX.Element {
             <TinderCard className={ swipe } key={ character.name } onSwipe={ dir => swiped(dir, character.name) } onCardLeftScreen={ () => outOfFrame(character.name) }>
               <div style={ { backgroundImage: 'url(' + character.url + ')' } } className={ card }>
                 <h3>{ character.name }</h3>
+              </div>
+              <div className={ costDiv }>
+                <h3>{ character.goal }</h3>
+                <div className={ costStyle }>
+                  <div className={ before }  style={ { height: ` ${ character.cost }%` } }></div>
+                </div>
               </div>
             </TinderCard>
           ) }
