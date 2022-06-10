@@ -3,11 +3,13 @@ import { Item, SavedItemAction, SAVED_ITEM} from './save.actions';
 type ItemState = Item;
 
 const initialState: ItemState = {
-  name: '',
-  id: 0,
-  text: '',
+    id: 0,
+  userId: 0,
+  title: '',
+  body: '',
   cost: 0,
-  date: 0
+  date: 0,
+  url: ''
 };
 
 export default (
@@ -18,20 +20,25 @@ export default (
   case SAVED_ITEM: {
     const {
       item: {
-        name,
         id,
-        text,
+        userId,
+        title,
+        body,
         cost,
-        date
+        date,
+        url
+        
       }
     } =action;
 
     return {
-      name,
       id,
-      text,
+      userId,
+      title,
+      body,
       cost,
-      date
+      date,
+      url
     };
   }
 

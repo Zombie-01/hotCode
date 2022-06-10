@@ -1,13 +1,18 @@
 import { useEffect } from 'react';
-import { Item } from 'stores/save'; //saveItem from save.dispatcher
+import { Item, saveItem } from 'stores/save'; //saveItem from save.dispatcher
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from 'stores';
 
-const saveItem = (): Item => {
+const useItem = (): Item => {
   const dispatch = useDispatch();
   const item = useSelector((state: RootState) => state.item);
   // dispatch хийгдэнэ
+  useEffect(() => {
+    if (!item.userId) {
+      dispatch(saveItem(1));
+    }
+  }, []);
   return item;
 };
 
-export default saveItem;
+export default useItem;

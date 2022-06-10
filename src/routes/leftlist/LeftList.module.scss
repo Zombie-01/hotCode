@@ -12,6 +12,7 @@
         border: 1px solid #777;
         border-radius: 5px;
         display: flex;
+        justify-content: space-evenly;
         gap: 1rem;
         .img {
             width: 120px !important;

@@ -1,11 +1,13 @@
 export const SAVED_ITEM = 'SAVED_ITEM';
 
 export interface Item {
-    name: string,
     id: number,
-    text: string,
+    userId: number,
+    title: string,
+    body: string,
     cost: number,
-    date: number
+    date: number,
+    url: string
 }
 
 export interface SavedItemAction {

@@ -1,29 +1,37 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { saveItem } from 'hooks/save';
 import styles from './LeftList.module.scss';
 
-const { saveList, listitem, date, body, header, text, img, costStyle, costDiv, before } = styles;
+const { saveList, listitem, dateStyle, body, header, textStyle, img, costStyle, costDiv, before } = styles;
 export default function LeftList(): JSX.Element{
-
-
+  const { 
+    id,
+    userId,
+    title,
+    body,
+    cost,
+    date,
+    url } = saveItem();
+    
   return (
     <>
       <Head>
         <title>Хадгалсан</title>
       </Head>
       <div className={ saveList }>
-        <Link href="asd">
+        <Link href="upList">
           <div className={ listitem }>
             <div className={ img }>
               <img src="" alt="" />
             </div>
             <div className={ body }>
-              <div className={ header }>name</div>
-              <div className={ text }>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, non!</p>
+              <div className={ header }>{ userId }</div>
+              <div className={ textStyle }>
+                <p>{ title }</p>
               </div>
-              <div className={ date }>2022:10:5</div>
+              <div className={ dateStyle }>2022:10:5</div>
             </div>
             <div className={ costDiv }>
               <h4>1000$</h4>
