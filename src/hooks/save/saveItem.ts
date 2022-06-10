@@ -8,9 +8,7 @@ const useItem = (): Item => {
   const item = useSelector((state: RootState) => state.item);
   // dispatch хийгдэнэ
   useEffect(() => {
-    if (!item.userId) {
-      dispatch(saveItem(1));
-    }
+    dispatch(saveItem(1));
   }, []);
   return item;
 };

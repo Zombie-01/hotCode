@@ -12,8 +12,11 @@
         border: 1px solid #777;
         border-radius: 5px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         gap: 1rem;
+        .body {
+            min-width: 50%;
+        }
         .img {
             width: 120px !important;
             height: auto;

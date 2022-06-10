@@ -6,41 +6,35 @@ import styles from './LeftList.module.scss';
 
 const { saveList, listitem, dateStyle, body, header, textStyle, img, costStyle, costDiv, before } = styles;
 export default function LeftList(): JSX.Element{
-  const { 
-    id,
-    userId,
-    title,
-    body,
-    cost,
-    date,
-    url } = saveItem();
-    
+  const item  = saveItem();
   return (
     <>
       <Head>
         <title>Хадгалсан</title>
       </Head>
       <div className={ saveList }>
-        <Link href="upList">
-          <div className={ listitem }>
-            <div className={ img }>
-              <img src="" alt="" />
-            </div>
-            <div className={ body }>
-              <div className={ header }>{ userId }</div>
-              <div className={ textStyle }>
-                <p>{ title }</p>
+        { Object.values(item).map((e,i) => {
+          return (<Link key={ i } href="upList">
+            <div className={ listitem }>
+              <div className={ img }>
+                <img src="" alt="" />
               </div>
-              <div className={ dateStyle }>2022:10:5</div>
-            </div>
-            <div className={ costDiv }>
-              <h4>1000$</h4>
-              <div className={ costStyle }>
-                <div className={ before }></div>
+              <div className={ body }>
+                <div className={ header }>{ e.userId }</div>
+                <div className={ textStyle }>
+                  <p>{ e.title }</p>
+                </div>
+                <div className={ dateStyle }>2022:10:5</div>
+              </div>
+              <div className={ costDiv }>
+                <h4>1000$</h4>
+                <div className={ costStyle }>
+                  <div className={ before }></div>
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>);
+        }) }
         
 
       </div>

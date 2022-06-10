@@ -4,8 +4,8 @@ import { savedItems } from './save.actions';
 
 export const saveItem = (userId: number): AppThunk => (
   async dispatch => {
-    const item = await executeGet(`https://jsonplaceholder.typicode.com/posts/${userId}`);
-
+    const item = await executeGet(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
+    
     dispatch(savedItems(item));
   }
 );
