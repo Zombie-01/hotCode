@@ -65,5 +65,14 @@
                 height: 500px !important;
             }
         }
+        @media (max-height: 500px) {
+            .card {
+                max-height: 250px !important;
+            }
+            .costStyle {
+                height: 180px !important;
+            }
+            max-width: 500px !important;
+        }
     }
 }
