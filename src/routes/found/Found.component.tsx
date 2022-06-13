@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/Link';
 import styles from './Found.module.scss';
 
-const { mainFound, save } = styles;
+const { mainFound, save, donation, take } = styles;
 export default function Found(): JSX.Element {
 
   return (
@@ -13,8 +13,8 @@ export default function Found(): JSX.Element {
       </Head>
       <div className={ mainFound }>
         <div>
-          <Link href="donate"><section>Өгөх</section></Link>
-          <Link href="take"><section>Авах</section></Link>
+          <Link href="donate"><section className={ donation }>Хандив өгөх</section></Link>
+          <Link href="take"><section className={ take }>Хандив авах</section></Link>
         </div>
         <Link href="leftlist" >
           <section className={ save }>

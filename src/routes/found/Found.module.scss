@@ -1,27 +1,36 @@
 .mainFound {
+    max-width: 800px;
     margin: auto;
     padding-top: 5rem;
-    width: fit-content;
     padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 20px;
     div {
-        display: flex;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        margin: auto;
         section {
             padding: 1rem;
             border-radius: 10px;
-            margin: 0 0 1rem 0;
-            &:first-child {
-                border: 1px solid yellowgreen;
-            }
-            &:last-child {
-                border: 1px solid pink;
-            }
+            margin: 1rem;
+            min-height: 400px;
+            cursor: pointer;
+        }
+        .donation {
+            background: url("/assets/donation.jpg") no-repeat center center/cover;
+        }
+        .take {
+            background: url("/assets/taje.jpg") no-repeat center center/cover
         }
     }
     .save {
-        border: 1px solid skyblue;
         border-radius: 10px;
-        text-align: center;
+        min-height: 300px;
+        margin: auto;
+        max-width: 100%;
+        cursor: pointer;
+        margin: 1rem;
         padding: 1rem;
+        background: url("/assets/save.jpg") no-repeat center center/cover;
     }
 }
