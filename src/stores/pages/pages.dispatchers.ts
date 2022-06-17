@@ -13,7 +13,8 @@ export const getSchema = (): AppThunk => (
 export const getPage = (pageId: string): AppThunk => (
   async dispatch => {
     const page = await executeGet(`/api/page/${pageId}`);
-
+    
     dispatch(updatePages(page));
+    console.log(pageId);
   }
 );

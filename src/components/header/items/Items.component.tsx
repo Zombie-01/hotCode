@@ -12,7 +12,7 @@ const {
 const links = [
   { name: 'Нүүр', url: '/', alias: [] },
   { name: 'Мэдээлэл', url: '/pages', alias: ['/[page]'] },
-  { name: 'Хандив', url: '/found', alias: [] },
+  { name: 'Хандив', url: '/found', alias: ['/[user]'] },
   { name: 'Пропайл', url: '/profile', alias: [] }
 ];
 
@@ -27,8 +27,7 @@ export default function Items(): JSX.Element {
           className={
             injectClassNames([
               active,
-              pathname === url
-                        || alias.includes(pathname)
+              pathname === url || alias.includes(pathname)
             ])
           }
         >

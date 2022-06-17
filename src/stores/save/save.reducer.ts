@@ -13,7 +13,7 @@ export default (
   switch (action.type) {
   case SAVED_ITEM: {
     const item= action.item;
-    
+      
     return item;
   }
 

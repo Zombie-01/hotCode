@@ -77,21 +77,20 @@ export default function Donate(): JSX.Element {
   const characters = db;
   const [lastDirection, setLastDirection] = useState();
 
-  const swiped = (direction: any, nameToDelete: any) => {
+  const swiped = (direction: any, name: any) => {
     if(direction === 'left'){
       router.push('leftlist');
     }
     if(direction === 'up'){
-      router.push('uplist');
+      router.push(`/donate/${name}`);
     }
     if(direction === 'right'){
-      console.log(nameToDelete);
+      console.log( " delete " + name);
     }
   };
 
   const outOfFrame = (name:any) => {
     console.log('asd');
-    
   };
   return (
     <>
