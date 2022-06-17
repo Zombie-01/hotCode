@@ -8,12 +8,12 @@ export interface Register {
         lastName: string,
         cost: string,
         date: null,
-        phone: string,
-        imgs: {
-            img_01: string,
-            img_02: string,
-            img_03: string
-        }
+        phone: string
+        // imgs: {
+        //     img_01: string,
+        //     img_02: string,
+        //     img_03: string
+        // }
     }
 }
 

@@ -8,12 +8,12 @@ const initialState: registerState = {
     lastName: '',
     cost: '',
     date: null,
-    phone: '',
-    imgs: {
-      img_01: '',
-      img_02: '',
-      img_03: ''
-    }
+    phone: ''
+    // imgs: {
+    //   img_01: '',
+    //   img_02: '',
+    //   img_03: ''
+    // }
   }
 };
 
