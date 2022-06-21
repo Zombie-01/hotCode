@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/Link';
+import Link from 'next/link';
 import styles from './Found.module.scss';
 
 const { mainFound, save, donation, take } = styles;
