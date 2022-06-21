@@ -9,7 +9,7 @@ In this section we'll go over
 
 You can clone this repository by running the following command:
 ```bash
-git clone https://github.com/Tomburgs/pwa-boilerplate
+git clone 
 ```
 
 After this, run the `yarn install` command to install node modules.
