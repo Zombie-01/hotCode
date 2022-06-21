@@ -1,5 +1,3 @@
-import register from "routes/register";
-
 export const REQUEST_REGISTER = 'REQUEST_REGISTER';
 
 export interface Register {
@@ -24,7 +22,7 @@ export interface RequestRegisterAction {
 
 export type reguestAction = RequestRegisterAction;
 
-export const reguestState = (state: Register): RequestRegisterAction => ({
+export const reguestState = (register: Register): RequestRegisterAction => ({
   type: REQUEST_REGISTER,
-  register: state
+  register
 });

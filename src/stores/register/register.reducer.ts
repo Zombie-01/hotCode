@@ -17,6 +17,7 @@ const initialState: registerState = {
   }
 };
 
+
 export default (
   state: registerState = initialState,
   action: RequestRegisterAction

@@ -1,10 +1,9 @@
-import { request } from 'https';
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { reguestState } from 'stores/register';
+import { reguestUser } from 'stores/register';
 import styles from './register.module.scss';
 
-const { mainBody, border, header, profile, headerbody,chooseButton, body, section,subButton  } = styles;
+const { mainBody, border, header, profile, headerbody, subButton  } = styles;
 export default function Register(): JSX.Element {
 
   const saveRegister = async (event: any) => {
@@ -16,7 +15,11 @@ export default function Register(): JSX.Element {
       date: event.target.date.value,
       phone: event.target.phone.value
     };
-    reguestState({ state });
+    reguestUser( { state } );
+    const a = reguestUser(state);
+    console.log(a);
+    
+    
   };
   return(
     <>
@@ -32,8 +35,8 @@ export default function Register(): JSX.Element {
               <div className={ headerbody }>
                 <input  type="text" name="lastName" id="lastName" placeholder="Овог" />
                 <input type="text" name="name" id="name" placeholder="нэр"/>
-                <input type="number" name="cost" id="cost" placeholder="Мөнгөн дүн ₮"/>
-                <input  type="number" name="phone" id="phone" placeholder="утасны дугаар"/>
+                <input type="text" name="cost" id="cost" placeholder="Мөнгөн дүн ₮"/>
+                <input  type="text" name="phone" id="phone" placeholder="утасны дугаар"/>
                 <input  type="date" name="date" id="date" placeholder="Төрсөн өдөр"/>
               </div>
             </div>
