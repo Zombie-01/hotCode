@@ -80,14 +80,7 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
           </figcaption>
           {
             isMobile.iOS()
-              ? (
-                <button
-                  onClick={ this.install }
-                  className={ button }
-                >
-                  Add to Home Screen
-                </button>
-              )
+              ? <IOSInstructions />
               : (
                 <button
                   onClick={ this.install }
