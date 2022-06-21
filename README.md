@@ -13,3 +13,4 @@ npm run dev
 
 
 
+<!-- npm install -D @netlify/plugin-nextjs -->
