@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
 import { getWindowProperty, isMobile, browserStorage } from 'utils/browser';
 import { checkMediaProperty } from 'utils/css';
+import Icon from 'components/icon';
 import { BeforeInstallPromptEvent } from './A2HS';
 import IOSInstructions from './IOSInstructions';
 import styles from './A2HS.module.scss';
+
 
 export const InstallAccepted = 'accepted';
 export const InstallDismissed = 'dismissed';
@@ -16,7 +18,9 @@ const DISPLAY_STANDALONE = 'display-mode: standalone';
 const {
   A2HS: A2HSWrapper,
   A2HSControls,
-  button
+  button,
+  iconBox,
+  iconPlus
 } = styles;
 type InstallState = {
     isOpen: boolean
@@ -75,18 +79,25 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
       return (
         <figure className={ A2HSWrapper }>
           <figcaption>
-            👋 Welcome!<br/>
-            Add this app to your home screen for the best experience!
+            👋 Тавтай морил!<br/>
+            суулгах
           </figcaption>
           {
             isMobile.iOS()
-              ? <IOSInstructions />
+              ? ( <div>Tap <button
+                  onClick={ this.install }
+                  className={ button }
+              >
+                <Icon asset="Box-Arrow" className={ iconBox }/>, 
+              </button> 
+              then select Add to Home Screen <Icon asset="Plus-Square" className={ iconPlus }/>.
+              </div>)
               : (
                 <button
                   onClick={ this.install }
                   className={ button }
                 >
-                  Add to Home Screen
+                  Суулгах
                 </button>
               )
           }

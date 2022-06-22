@@ -9,7 +9,7 @@ In this section we'll go over
 
 You can clone this repository by running the following command:
 ```bash
-git clone 
+git clone https://github.com/Zombie-01/hotCode.git
 ```
 
 After this, run the `yarn install` command to install node modules.
