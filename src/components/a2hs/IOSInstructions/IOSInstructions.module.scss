@@ -24,8 +24,9 @@
     z-index: 9999;
     text-align: center;
     box-shadow: 5px 5px 10px #666, -5px -5px 10px #666, -5px 5px 10px #666, 5px -5px 10px #666;
-    animation-name: example;
-    animation-duration: 2s;
+    opacity: 0;
+    bottom: 500px;
+    transition: all 4s;
     h4 {
         font-size: 18px;
         font-family: Belleza;
@@ -50,15 +51,9 @@
     }
 }
 
-@keyframes example {
-    0% {
-        bottom: 100%;
-        opacity: 0;
-    }
-    100% {
-        bottom: 300px;
-        opacity: 1;
-    }
+#popup.example {
+    bottom: 0;
+    opacity: 1;
 }
 
 .popupcloseicon {
@@ -70,6 +65,10 @@
     font-weight: bolder;
     text-shadow: 0px -1px 1px #00234C;
     cursor: pointer;
+}
+
+.none {
+    text-align: center;
 }
 
 .bottom-bar {

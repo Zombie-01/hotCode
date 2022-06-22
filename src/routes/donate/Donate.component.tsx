@@ -84,7 +84,7 @@ export default function Donate(): JSX.Element {
     if(direction === 'up'){
       router.push(`/donate/${name}`);
     }
-    if(direction === 'right'){
+    if(direction === 'down'){
       console.log( " delete " + name);
     }
   };
