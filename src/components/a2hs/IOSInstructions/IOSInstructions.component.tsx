@@ -18,8 +18,8 @@ export default function IOSInstructions(): JSX.Element {
   return  (
     visible?
       <>
-        <div id={ popup }>
-          <div className={ popupcloseicon } onClick={ () => remove() }>&times;</div>
+        <div id={ popup }  onClick={ () => remove() }>
+          <div className={ popupcloseicon }>&times;</div>
           <h4>Суулгах уу?</h4>
           <p> <Icon asset="Box-Arrow" className={ iconBox }/>, дараад add to home screen!</p>
         </div>

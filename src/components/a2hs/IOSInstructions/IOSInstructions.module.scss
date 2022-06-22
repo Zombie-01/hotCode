@@ -13,13 +13,12 @@
 
 #popup {
     position: fixed;
-    left: 13.8%;
     width: 208px;
     height: 80px;
     padding: 10px;
     background-color: var(--primary-block-color);
     border: 2px solid var(--primary-text-color);
-    border-radius: 5px;
+    border-radius: 20px;
     z-index: 9999;
     text-align: center;
     box-shadow: 5px 5px 10px #666, -5px -5px 10px #666, -5px 5px 10px #666, 5px -5px 10px #666;
@@ -51,10 +50,12 @@
 
 @keyframes example {
     0% {
-        bottom: 1000px;
+        bottom: 100%;
+        opacity: 0;
     }
     100% {
-        bottom: 0;
+        bottom: 300px;
+        opacity: 1;
     }
 }
 
