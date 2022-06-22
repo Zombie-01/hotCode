@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from 'components/icon';
 import styles from './IOSInstructions.module.scss';
 
 const {
   iconBox,
-  iconPlus
+  popup,
+  popupcloseicon
 } = styles;
 
 export default function IOSInstructions(): JSX.Element {
-  return (
-    <p>
-            Tap <Icon asset="Box-Arrow" className={ iconBox }/>, 
-            then select Add to Home Screen <Icon asset="Plus-Square" className={ iconPlus }/>.
-    </p> 
+  const [visible, setVisible] = useState(true);
+
+  const remove = (): void => {
+    setVisible(false);
+  };
+ 
+  return  (
+    visible?
+      <>
+        <div id={ popup }>
+          <div className={ popupcloseicon } onClick={ () => remove }>&times;</div>
+          <h4>Add Our App?</h4>
+          <p> <Icon asset="Box-Arrow" className={ iconBox }/>,  for quick access!</p>
+        </div>
+      </> : <></>
   );
 }
