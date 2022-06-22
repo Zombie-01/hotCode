@@ -13,6 +13,8 @@
 
 #popup {
     position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 208px;
     height: 80px;
     padding: 10px;
