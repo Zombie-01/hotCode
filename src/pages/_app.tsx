@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,  useState } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'contexts/theme';
 import Header from 'components/header';
@@ -11,6 +11,8 @@ import { AppProps } from 'next/app';
 import 'styles/main.scss';
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
+  const viewportWidth = globalThis.innerWidth;
+  const [ isMobile, setisMobile ] = useState(true);
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register(
@@ -18,7 +20,11 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         { scope: '/' }
       );
     }
+    if (viewportWidth > 768){
+      setisMobile(false);
+    }
   }, []);
+  
 
   return (
     <>
@@ -38,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
           <NotificationList />
           <Header />
           <Component { ...pageProps } />
-          <Footer />
+          { isMobile? <div style={ { margin: '3.8rem' } }></div>: <Footer /> }
         </ThemeProvider>
       </Provider>
     </>
