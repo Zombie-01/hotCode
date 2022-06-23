@@ -4,6 +4,7 @@ import Items from 'components/header/items';
 import Logo from 'components/header/logo';
 import ThemeToggler from 'components/header/themeToggler';
 import styles from './Header.module.scss';
+import BackButton from './backButton';
 
 const OFFLINE = 'offline';
 
@@ -54,6 +55,7 @@ export default memo(
         <header className={ header }>
           <nav>
             <div className={ headerControls }>
+              <BackButton />
               <Logo />
               <ThemeToggler />
             </div>
