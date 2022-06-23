@@ -90,7 +90,7 @@ export default function Donate(): JSX.Element {
   };
 
   const outOfFrame = (name:any) => {
-    console.log('asd');
+    console.log('clicked user');
   };
   return (
     <>

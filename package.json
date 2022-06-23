@@ -5,6 +5,7 @@
     "dependencies": {
         "@svgr/webpack": "6.2.1",
         "bootstrap": "^5.1.3",
+        "firebase": "^9.8.3",
         "html-react-parser": "^1.4.5",
         "jstoxml": "^2.2.7",
         "next": "^12.1.6",
@@ -13,6 +14,7 @@
         "react-bootstrap": "^2.4.0",
         "react-dom": "^17.0.2",
         "react-redux": "^7.2.6",
+        "react-router-dom": "^6.3.0",
         "react-tinder-card": "^1.4.5",
         "redux": "^4.1.2",
         "redux-thunk": "^2.4.1",
@@ -28,6 +30,7 @@
     "devDependencies": {
         "@netlify/plugin-nextjs": "^4.9.1",
         "@types/css-modules": "^1.0.2",
+        "@types/firebase": "^3.2.1",
         "@types/node": "^14.14.22",
         "@types/react": "^17.0.3",
         "@types/react-dom": "^17.0.9",

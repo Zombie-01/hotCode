@@ -16,10 +16,6 @@ export default function Register(): JSX.Element {
       phone: event.target.phone.value
     };
     reguestUser( { state } );
-    const a = reguestUser(state);
-    console.log(a);
-    
-    
   };
   return(
     <>

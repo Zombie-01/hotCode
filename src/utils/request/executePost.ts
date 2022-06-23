@@ -9,7 +9,7 @@ const executePost = (request: RequestInfo, formdata: Register): Promise<any> => 
       'Authorization': `${formdata.state.name}`
     },
     body: JSON.stringify(formdata)
-  })
+  }).catch(err => console.warn(err))
 );
 
 export default executePost;

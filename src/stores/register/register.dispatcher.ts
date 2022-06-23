@@ -1,6 +1,6 @@
 import { executePost } from 'utils/request';
 import { AppThunk } from 'stores';
-import { baseURLDodomo } from 'axios';
+import { baseURLDodomo } from 'baseUrlFire';
 
 
 export const reguestUser = (state: any): AppThunk => (

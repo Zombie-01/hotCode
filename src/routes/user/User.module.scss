@@ -1,0 +1,40 @@
+@use 'styles/variables/media';
+@use 'styles/variables/theme';
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 6rem 1rem 1rem 1rem;
+}
+
+.header {
+    border-radius: 20px;
+    background-color: var(--primary-block-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+    .left {
+        width: 30%;
+        height: 400px;
+        background-color: aqua;
+        border-radius: 20px;
+        margin: 1rem;
+    }
+    .right {
+        width: 70%;
+        padding: 1rem;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding-right: 1rem;
+        justify-content: start;
+        padding-left: 1rem;
+        .left {
+            width: 100%;
+        }
+        .right {
+            width: 100%;
+        }
+    }
+}
