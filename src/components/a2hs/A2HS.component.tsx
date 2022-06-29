@@ -75,8 +75,10 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
       return (
         <figure className={ A2HSWrapper }>
           <figcaption>
-            👋 Тавтай морил!<br/>
-            суулгах
+            <span>
+              👋 Тавтай морил!<br/>
+              суулгах
+            </span>
           </figcaption>
           {
             isMobile.iOS()
@@ -92,6 +94,7 @@ export default class A2HS extends PureComponent<unknown, InstallState> {
           }
           <div className={ A2HSControls }>
             <button
+              className="a2hs-later"
               type="button"
               aria-label="close notice"
               onClick={ this.dismissNotification }

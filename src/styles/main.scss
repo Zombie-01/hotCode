@@ -105,12 +105,22 @@ ul {
 h1 {
   font-size: 36px;
   font-weight: 500;
+  font-family: CircularXXWeb, Trebuchet, Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: CircularXXWeb, Trebuchet, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #000;
 }
 
 a {
   color: white;
   text-decoration: none;
-  font-weight: 700;
+  font-family: CircularXXWeb, Trebuchet, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
 }
 
 button {
@@ -135,7 +145,7 @@ button {
   border-radius: 12px;
   display: inline-block;
   cursor: pointer;
-  font-family: CircularXXWeb,Trebuchet,Helvetica,Arial,sans-serif;
+  font-family: CircularXXWeb, Trebuchet, Helvetica, Arial, sans-serif;
   font-size: 18px;
   text-decoration: none;
 }
