@@ -2,12 +2,10 @@
 @use 'styles/variables/button';
 @use 'styles/variables/theme';
 .wrapper {
-    background-color: #fcebda;
     padding: var(--header-height) 0 0;
     @include theme.dark-mode {
         --primary-text-color: #f2f2f7;
         --secondary-text-color: #f3f3f7;
-        background-color: #2e3191;
     }
 }
 
@@ -41,13 +39,6 @@
         margin: 0 auto;
         text-align: center;
         padding: var(--content-padding) 0;
-        a {
-            --button-text-color: #f2f2f7;
-            --button-font-weight: 600;
-            --button-background: #000;
-            --button-hover: #000;
-            @include button.default;
-        }
         p {
             color: var(--secondary-text-color);
             font-size: 16px;

@@ -1,3 +1,8 @@
+.main-gradient {
+    background: rgb(250,179,73);
+    background: linear-gradient(90deg, rgba(250,179,73,1) 0%, rgba(255,145,77,1) 50%, rgba(255,74,22,1) 100%);
+}
+
 .main-font {
     font-family: 'Roboto', sans-serif;
 }

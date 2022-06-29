@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
           <NotificationList />
           <Header />
           <Component { ...pageProps } />
-          { isMobile? <div style={ { margin: '3.8rem' } }></div>: <Footer /> }
+          <Footer />
         </ThemeProvider>
       </Provider>
     </>

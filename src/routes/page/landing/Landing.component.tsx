@@ -28,16 +28,11 @@ export default function Landing(): JSX.Element {
             </p>
           </div>
           <div className={ landingNavigationWrapper }>
-            <Link href="/donate">Хандив өгөх</Link>
-            <p>Таний багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
+            <div className="primary-button main-gradient">
+              <Link href="/donate">Хандив өгөх</Link>
+            </div>
+            <p>Таны багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
           </div>
-          <Image
-            className={ landingImage }
-            src="/assets/landing.png"
-            alt="child"
-            width="450px"
-            height="310px"
-          />
         </div>
       </div>
     </>
