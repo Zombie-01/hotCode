@@ -7,7 +7,7 @@ export default function backButton(): JSX.Element {
   const router = useRouter();
   return (
     <button className={ styles.button } type="submit" onClick={ () => router.back() }>
-      <Icon asset="back-button" className="asd" />
+      <div className={ styles.hamburger }></div>
     </button>
   );
 }

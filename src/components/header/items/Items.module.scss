@@ -1,10 +1,11 @@
 @use 'styles/variables/media';
 @use 'styles/variables/theme';
+
 .items {
     align-items: center;
     display: flex;
     flex-flow: row;
-    justify-content: flex-end;
+    justify-content: center;
     list-style: none;
     padding: 0;
     @include media.mobile {
@@ -13,11 +14,14 @@
         box-shadow: var(--shadow);
         box-sizing: border-box;
         height: var(--header-items-height);
+        flex-flow: column;
         justify-content: space-evenly;
         left: 0;
         padding: 1rem 1rem max(env(safe-area-inset-bottom), 1rem);
-        position: fixed;
         width: 100vw;
+    height: 100vh !important;
+    justify-content: center;
+    align-items: center;
     }
     a {
         color: var(--primary-text-color);
