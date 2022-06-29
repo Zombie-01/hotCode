@@ -21,15 +21,17 @@ export default function Landing(): JSX.Element {
       <div className={ wrapper }>
         <div className={ landing }>
           <div className={ landingText }>
-            <h1>Бяцхан зүрхний баатар</h1>
-            <p>
-              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.<br />
-              Та ч гэсэн баатар болж чадна.
-            </p>
+            <span className="landing--title">A Place for you</span>
           </div>
           <div className={ landingNavigationWrapper }>
             <div className="primary-button main-gradient">
-              <Link href="/donate">Хандив өгөх</Link>
+              <Link href="/donate">DONATE</Link>
+            </div>
+            <p style={ {marginTop: "32px"} } >
+              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.
+            </p>
+            <div style={ {padding: "28px 0px 28px 0px"} }>
+              <img src="assets/5299.jpg" alt="illust" width="350px" />
             </div>
             <p>Таны багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
           </div>

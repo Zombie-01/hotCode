@@ -1,11 +1,10 @@
 @use 'styles/variables/media';
 .main {
-    text-align: center;
     background-color: var(--primary-block-color);
     .end {
         display: flex;
         gap: 1rem;
-        padding-bottom: 1rem;
+        // padding-bottom: 1rem;
         width: fit-content;
         margin: auto;
         a {
@@ -21,7 +20,7 @@
 }
 
 .footer {
-    border-bottom: 1px solid #ddd;
+    border-top: 2px solid #ddd;
     max-width: 1200px;
     margin: auto;
     box-sizing: border-box;
@@ -30,13 +29,27 @@
     font-size: 16px;
     font-weight: 500;
     justify-content: space-evenly;
-    padding: var(--content-padding) var(--content-padding) calc(var(--header-items-height) + var(--content-padding));
+    padding: 32px;
     width: 100%;
     section {
         flex: 1;
+        h3 {
+            font-family: CircularXXWeb,Trebuchet,Helvetica,Arial,sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #000;
+            margin: 12px 0px;
+        }
         ul {
             text-align: left;
-            margin: 1rem;
+            margin: 0rem;
+            font-family: CircularXXWeb,Trebuchet,Helvetica,Arial,sans-serif;
+            li {
+                font-family: CircularXXWeb,Trebuchet,Helvetica,Arial,sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                color: #222;
+            }
         }
     }
     p {
