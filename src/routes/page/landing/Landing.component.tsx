@@ -19,6 +19,7 @@ export default function Landing(): JSX.Element {
         <title>Нүүр хуудас</title>
       </Head>
       <div className={ wrapper }>
+        { /* <Particle params={ ParticlesConfig } className="App-particles__container" /> */ }
         <div className={ landing }>
           <div className={ landingText }>
             <span className="landing--title">A Place for you</span>
