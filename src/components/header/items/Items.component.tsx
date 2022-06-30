@@ -13,7 +13,7 @@ const links = [
   { name: 'Нүүр', url: '/', alias: [] },
   { name: 'Мэдээлэл', url: '/pages', alias: ['/[page]'] },
   { name: 'Хандив', url: '/found', alias: ['/[user]'] },
-  { name: 'Пропайл', url: '/profile', alias: [] }
+  { name: 'Профайл', url: '/profile', alias: [] }
 ];
 
 export default function Items(): JSX.Element {

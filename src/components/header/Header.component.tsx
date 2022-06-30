@@ -79,7 +79,7 @@ export default memo(
           <nav style={ {padding: "8px"} }>
             <div className={ headerControls }>
               <ThemeToggler />
-              <img src="assets/logo.png" width="50px"/>
+              <img src="assets/full-logo.png" width="120px"/>
               { isMobile ? <button className={ styles.button } type="submit" onClick={ () => rightPointz() }>
                 { rightPoint == -100 ? <div className={ styles.hamburger }></div> : <div className={ styles.ex }></div> }
               </button> : "" }
