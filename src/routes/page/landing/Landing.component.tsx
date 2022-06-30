@@ -26,7 +26,7 @@ export default function Landing(): JSX.Element {
           </div>
           <div className={ landingNavigationWrapper }>
             <div className="primary-button main-gradient">
-              <Link href="/donate">DONATE</Link>
+              <Link style={ {fontSize: "18px !important"} } href="/donate">ХАНДИВ ӨРГӨХ</Link>
             </div>
             <p style={ {marginTop: "32px"} } >
               Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.

@@ -1,36 +1,42 @@
 .mainFound {
-    max-width: 800px;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-size: 20px;
+  .title {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: CircularXXWeb, Trebuchet, Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     margin: auto;
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-    font-weight: bold;
-    font-size: 20px;
-    div {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        margin: auto;
-        section {
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem;
-            min-height: 400px;
-            cursor: pointer;
-        }
-        .donation {
-            background: url("/assets/donation.jpg") no-repeat center center/cover;
-        }
-        .take {
-            background: url("/assets/taje.jpg") no-repeat center center/cover
-        }
+    section {
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem;
+      min-height: 400px;
+      cursor: pointer;
     }
-    .save {
-        border-radius: 10px;
-        min-height: 300px;
-        margin: auto;
-        max-width: 100%;
-        cursor: pointer;
-        margin: 1rem;
-        padding: 1rem;
-        background: url("/assets/save.jpg") no-repeat center center/cover;
+    .donation {
+      background: url("/assets/donation.jpg") no-repeat center center/cover;
     }
+    .take {
+      background: url("/assets/taje.jpg") no-repeat center center/cover;
+    }
+  }
+  .save {
+    border-radius: 10px;
+    min-height: 300px;
+    margin: auto;
+    max-width: 100%;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 1rem;
+    background: url("/assets/save.jpg") no-repeat center center/cover;
+  }
 }
