@@ -76,9 +76,10 @@ export default memo(
                     You are currently browsing in offline mode.
         </div>
         <header className={ header }>
-          <nav>
+          <nav style={ {padding: "8px"} }>
             <div className={ headerControls }>
               <ThemeToggler />
+              <img src="assets/logo.png" width="50px"/>
               { isMobile ? <button className={ styles.button } type="submit" onClick={ () => rightPointz() }>
                 { rightPoint == -100 ? <div className={ styles.hamburger }></div> : <div className={ styles.ex }></div> }
               </button> : "" }

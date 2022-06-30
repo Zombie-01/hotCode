@@ -1,9 +1,276 @@
-<style></style>
+<style>
+  .title {
+    font-size: 32px;
+    font-family: CircularXXWeb, Trebuchet, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+  }
+  .page-title {
+    margin: 15px 0;
+    padding: 0 0.5em;
 
-<h1>Шилэн данс</h1>
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 4vw, 3.2rem);
+    text-align: center;
 
-<p>
-    Манай хамт олон хандивлагч болон хандив цуглуулагчийн хооронд итгэлцэл бүтээхийн тулд монголийн авилгатай тэмцэх газар болон гадаандын ,,, гэх компаниар давхар шалгалт хийлгэж хэрэглэгчиддээ бодит цагаар мэдээлэлээ хуваалцдаг. Та дараах товчны тусламжтай
-    бидний тайланг харах боломжтой.
-    <a href="asd"> asdas </a>
-</p>
+    color: var(--light-black);
+  }
+
+  /*---------------------Conversion Rate List----------------------*/
+  .conversion-rate-list {
+    width: 80%;
+    margin: 25px auto;
+
+    text-align: center;
+
+    list-style: none;
+  }
+
+  .list-item {
+    padding-bottom: 2.5em;
+
+    border-radius: 6px;
+    box-shadow: 1px 1px 16px var(--transparent-black);
+    overflow: hidden;
+  }
+
+  .list-item + .list-item {
+    margin-top: 10px;
+  }
+
+  .platform {
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  .name,
+  .platform {
+    font-family: var(--title-font), sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  .value {
+    line-height: 1.5;
+    font-family: var(--data-font), sans-serif;
+    font-size: 2rem;
+
+    color: var(--light-black);
+  }
+  /*-----------------------------Conversion Rate Table---------------------------*/
+  .conversion-rate-table {
+    flex-basis: min(80%, 900px);
+
+    display: none;
+
+    padding-bottom: 1em;
+
+    background-color: var(--white-bone);
+    border-radius: 6px;
+    border-collapse: collapse;
+    box-shadow: 1px 1px 16px var(--transparent-black);
+    overflow: hidden;
+  }
+
+  .table__headers {
+    background-color: var(--blue);
+  }
+
+  .header {
+    padding: 0.25em 0;
+
+    font-family: var(--title-font), sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    color: var(--white);
+  }
+
+  .table__row:nth-child(odd) {
+    background-color: var(--white);
+  }
+
+  .row__cell {
+    padding: 0.25em 0;
+
+    font-family: var(--data-font), sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .row__cell + .row__cell,
+  .header + .header {
+    border-left: 1px solid var(--light-gray);
+  }
+
+  @media (min-width: 600px) {
+    .conversion-rate-list {
+      display: none;
+    }
+
+    .conversion-rate-table {
+      display: table;
+    }
+
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 80vh;
+    }
+  }
+</style>
+
+<h1 class="title">Шилэн данс</h1>
+<ul>
+  <li>
+    <h1 class="page-title">Ads Conversion Rate by Platform</h1>
+
+    <ul class="conversion-rate-list">
+      <li class="list-item">
+        <h2 class="platform">Facebook</h2>
+
+        <dl class="ad">
+          <dt class="name">Leads</dt>
+          <dd class="value">468</dd>
+
+          <dt class="name">Sales</dt>
+          <dd class="value">142</dd>
+
+          <dt class="name">Conversion Rate</dt>
+          <dd class="value">30.34%</dd>
+        </dl>
+      </li>
+
+      <li class="list-item">
+        <h2 class="platform">Google</h2>
+
+        <dl class="ad">
+          <dt class="name">Leads</dt>
+          <dd class="value">327</dd>
+
+          <dt class="name">Sales</dt>
+          <dd class="value">199</dd>
+
+          <dt class="name">Conversion Rate</dt>
+          <dd class="value">60.85%</dd>
+        </dl>
+      </li>
+
+      <li class="list-item">
+        <h2 class="platform">Instagram</h2>
+
+        <dl class="ad">
+          <dt class="name">Leads</dt>
+          <dd class="value">547</dd>
+
+          <dt class="name">Sales</dt>
+          <dd class="value">89</dd>
+
+          <dt class="name">Conversion Rate</dt>
+          <dd class="value">16.27%</dd>
+        </dl>
+      </li>
+
+      <li class="list-item">
+        <h2 class="platform">Twitter</h2>
+
+        <dl class="ad">
+          <dt class="name">Leads</dt>
+          <dd class="value">149</dd>
+
+          <dt class="name">Sales</dt>
+          <dd class="value">27</dd>
+
+          <dt class="name">Conversion Rate</dt>
+          <dd class="value">18.21%</dd>
+        </dl>
+      </li>
+
+      <li class="list-item">
+        <h2 class="platform">YouTube</h2>
+
+        <dl class="ad">
+          <dt class="name">Leads</dt>
+          <dd class="value">742</dd>
+
+          <dt class="name">Sales</dt>
+          <dd class="value">278</dd>
+
+          <dt class="name">Conversion Rate</dt>
+          <dd class="value">34.36%</dd>
+        </dl>
+      </li>
+    </ul>
+
+    <div class="wrap">
+      <table class="conversion-rate-table">
+        <thead class="table__head">
+          <tr class="table__headers">
+            <th class="header" scope="col">Platform</th>
+
+            <th class="header" scope="col">Leads</th>
+
+            <th class="header" scope="col">Sales</th>
+
+            <th class="header" scope="col">Conversion Rate</th>
+          </tr>
+        </thead>
+
+        <tbody class="table__content">
+          <tr class="table__row">
+            <td class="row__cell">Facebook</td>
+
+            <td class="row__cell">468</td>
+
+            <td class="row__cell">142</td>
+
+            <td class="row__cell">30.34%</td>
+          </tr>
+
+          <tr class="table__row">
+            <td class="row__cell">Google</td>
+
+            <td class="row__cell">327</td>
+
+            <td class="row__cell">199</td>
+
+            <td class="row__cell">60.85%</td>
+          </tr>
+
+          <tr class="table__row">
+            <td class="row__cell">Instagram</td>
+
+            <td class="row__cell">547</td>
+
+            <td class="row__cell">89</td>
+
+            <td class="row__cell">16.27%</td>
+          </tr>
+
+          <tr class="table__row">
+            <td class="row__cell">Twitter</td>
+
+            <td class="row__cell">149</td>
+
+            <td class="row__cell">27</td>
+
+            <td class="row__cell">18.12%</td>
+          </tr>
+
+          <tr class="table__row">
+            <td class="row__cell">YouTube</td>
+
+            <td class="row__cell">742</td>
+
+            <td class="row__cell">278</td>
+
+            <td class="row__cell">37.46%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+</ul>
