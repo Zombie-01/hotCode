@@ -22,7 +22,7 @@ export default function Landing(): JSX.Element {
         { /* <Particle params={ ParticlesConfig } className="App-particles__container" /> */ }
         <div className={ landing }>
           <div className={ landingText }>
-            <span className="landing--title">A Place for you</span>
+            <span className="landing--title">Хүүхэд бүрийн төлөө</span>
           </div>
           <div className={ landingNavigationWrapper }>
             <div className="primary-button main-gradient">
