@@ -7,20 +7,21 @@
     gap: 2px;
     height: fit-content;
     .listitem {
+        margin: 12px 0px 12px 0px;
         padding: 1rem;
         height: min-content;
         border: 1px solid #777;
         border-radius: 5px;
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 0rem;
         .body {
-            min-width: 50%;
+            min-width: 40%;
+            margin-left: 24px;
         }
         .img {
             width: 120px !important;
             height: auto;
-            background-color: aquamarine;
             border-radius: 10px;
         }
         .costStyle {

@@ -29,25 +29,28 @@ export default function Landing(): JSX.Element {
         <title>Нүүр хуудас</title>
       </Head>
       <div className={ wrapper }>
+        { /* <Particle params={ ParticlesConfig } className="App-particles__container" /> */ }
         <div className={ landing }>
           <div className={ landingText }>
-            <h1>Бяцхан зүрхний баатар</h1>
-            <p>
-              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.<br />
-              Та ч гэсэн баатар болж чадна.
-            </p>
+            <span className="landing--title">Хүүхэд бүрийн төлөө</span>
           </div>
           <div className={ landingNavigationWrapper }>
+<<<<<<< HEAD
             <div ref={myref} ><Link href="/donate">Хандив өгөх</Link></div>
             <p>Таний багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
+=======
+            <div className="primary-button main-gradient">
+              <Link style={ {fontSize: "18px !important"} } href="/donate">ХАНДИВ ӨРГӨХ</Link>
+            </div>
+            <p style={ {marginTop: "32px"} } >
+              Энэ дэлхийн хамгийн хүчтэй атлаа сулхан цохилох зүрх бүхний төлөө.
+            </p>
+            <div style={ {padding: "28px 0px 28px 0px"} }>
+              <img src="assets/5299.jpg" alt="illust" width="350px" />
+            </div>
+            <p>Таны багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
+>>>>>>> 817d83cc9b32cd80db42e9c828ea3b234d8aebcd
           </div>
-          <Image
-            className={ landingImage }
-            src="/assets/landing.png"
-            alt="child"
-            width="450px"
-            height="310px"
-          />
         </div>
       </div>
     </>

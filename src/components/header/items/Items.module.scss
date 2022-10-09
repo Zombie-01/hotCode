@@ -1,12 +1,12 @@
 @use 'styles/variables/media';
 @use 'styles/variables/theme';
+
 .items {
     align-items: center;
     display: flex;
     flex-flow: row;
     justify-content: center;
     list-style: none;
-    padding: 0;
     @include media.mobile {
         background-color: var(--primary-block-color);
         bottom: 0;
@@ -16,10 +16,17 @@
         flex-flow: column;
         justify-content: space-evenly;
         left: 0;
+<<<<<<< HEAD
         padding: 1rem 1rem max(env(safe-area-inset-bottom), 1rem);
         width: 100vw;
     height: 100vh !important;
     justify-content: center;
+=======
+        padding: 4rem 1rem max(env(safe-area-inset-bottom), 1rem);
+        width: 100vw;
+    height: 100vh !important;
+    justify-content: flex-start;
+>>>>>>> 817d83cc9b32cd80db42e9c828ea3b234d8aebcd
     align-items: center;
     }
     a {
@@ -28,8 +35,13 @@
     }
     >li {
         border-radius: 20px;
+<<<<<<< HEAD
         font-size: 28px;
         padding: 5px 10px;
+=======
+        font-size: 16px;
+        padding: 15px 10px;
+>>>>>>> 817d83cc9b32cd80db42e9c828ea3b234d8aebcd
         transition: background-color 200ms;
     }
 }

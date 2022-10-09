@@ -46,6 +46,7 @@ export default memo(
     }, []);
     const viewportWidth = globalThis.innerWidth;
   const [ isMobile, setisMobile ] = useState(true);
+<<<<<<< HEAD
   const [rightPoint,setRightPoint] = useState(-100)
   const rightPointz = () => {
     if(rightPoint == -100){
@@ -54,6 +55,16 @@ export default memo(
       setRightPoint(-100)
     }
   }
+=======
+  const [rightPoint,setRightPoint] = useState(-100);
+  const rightPointz = () => {
+    if(rightPoint == -100){
+      setRightPoint(0.1);
+    } else {
+      setRightPoint(-100);
+    }
+  };
+>>>>>>> 817d83cc9b32cd80db42e9c828ea3b234d8aebcd
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register(
@@ -76,14 +87,23 @@ export default memo(
                     You are currently browsing in offline mode.
         </div>
         <header className={ header }>
-          <nav>
+          <nav style={ {padding: "8px"} }>
             <div className={ headerControls }>
               <ThemeToggler />
+<<<<<<< HEAD
               { isMobile ? <button className={ styles.button } type="submit" onClick={ () => rightPointz() }>
                 {rightPoint == -100 ? <div className={styles.hamburger}></div> : <div className={ styles.ex}></div>}
               </button> : ""}
             </div>
             {isMobile ? <div className={mobilenav} style={{right: `${rightPoint}%`}}><Items/></div>: <Items/>}
+=======
+              <img src="assets/full-logo.png" width="120px"/>
+              { isMobile ? <button className={ styles.button } type="submit" onClick={ () => rightPointz() }>
+                { rightPoint == -100 ? <div className={ styles.hamburger }></div> : <div className={ styles.ex }></div> }
+              </button> : "" }
+            </div>
+            { isMobile ? <div className={ mobilenav } style={ {right: `${rightPoint}%`} }><Items/></div>: <Items/> }
+>>>>>>> 817d83cc9b32cd80db42e9c828ea3b234d8aebcd
           </nav>
         </header>
       </>

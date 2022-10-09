@@ -1,5 +1,6 @@
 @use 'styles/variables/media';
 @use 'styles/variables/theme';
+
 .header {
     --header-color: var(--primary-block-color);
     background-color: var(--header-color);
@@ -145,4 +146,8 @@
         transform: rotate(-45deg);
         background-color: var(--primary-text-color);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 817d83cc9b32cd80db42e9c828ea3b234d8aebcd

@@ -17,58 +17,34 @@ const {
 
 const db = [
   {
-    name: 'Zombie_1',
-    url: './img/richard.jpg',
+    name: 'Avatar 1',
+    url: 'assets/avatar1.png',
     goal: 100,
     cost: 60
   },
   {
-    name: 'Zombie_2',
-    url: './img/erlich.jpg',
+    name: 'Avatar 2',
+    url: 'assets/avatar2.png',
     goal: 1000,
     cost: 70
   },
   {
-    name: 'Zombie_3',
-    url: './img/monica.jpg',
+    name: 'Avatar 3',
+    url: 'assets/avatar3.png',
     goal: 1000,
     cost: 80
   },
   {
-    name: 'Zombie_4',
-    url: './img/jared.jpg',
+    name: 'Avatar 4',
+    url: 'assets/avatar4.png',
     goal: 10000,
     cost: 60
   },
   {
-    name: 'Zombie_5',
-    url: './img/jared.jpg',
+    name: 'Avatar 5',
+    url: 'assets/avatar5.png',
     goal: 15000,
     cost: 65
-  },
-  {
-    name: 'Zombie_6',
-    url: './img/jared.jpg',
-    goal: 2000,
-    cost: 10
-  },
-  {
-    name: 'Zombie_7',
-    url: './img/jared.jpg',
-    goal: 5000,
-    cost: 15
-  },
-  {
-    name: 'Zombie_8',
-    url: './img/jared.jpg',
-    goal: 600,
-    cost: 25
-  },
-  {
-    name: 'Zombie_9',
-    url: './img/dinesh.jpg',
-    goal: 300,
-    cost: 35
   }
 ];
 
