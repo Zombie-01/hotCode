@@ -48,7 +48,7 @@
         display: flex;
         height: 100%;
         @include media.mobile {
-            justify-content: center;
+            justify-content: space-between;
         }
     }
 }
@@ -78,5 +78,71 @@
 @at-root html:global(.offline) {
     .offline {
         display: flex;
+    }
+}
+
+.mobilenav{
+    position: fixed;
+    top: 0;
+    transition: all 1s;
+    &:first-child{
+        position: absolute;
+    }
+}
+.button {
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+}
+.hamburger{
+    width: 30px;
+    height: 3px;
+    position: relative;
+    background-color: var(--primary-text-color);
+    &::after{
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: 0;
+        height: 3px;
+        width: 30px;
+        background-color: var(--primary-text-color);
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        bottom: -12px;
+        left: 0;
+        background-color: var(--primary-text-color);
+
+    }
+}
+
+.ex{
+    position: fixed;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        top: 0%;
+        left: 0;
+        transform: rotate(45deg);
+        background-color: var(--primary-text-color);
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        top: 0%;
+        left: 0;
+        transform: rotate(-45deg);
+        background-color: var(--primary-text-color);
     }
 }

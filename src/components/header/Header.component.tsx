@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect,useState } from 'react';
 import Icon from 'components/icon';
 import Items from 'components/header/items';
 import Logo from 'components/header/logo';
@@ -12,11 +12,13 @@ const {
   header,
   headerControls,
   offline,
-  offlineIcon
+  offlineIcon,
+  mobilenav
 } = styles;
 
 const handleNetworkChange = (): void => {
   const { documentElement: { classList } } = document;
+  
 
   if (!navigator.onLine) {
     classList.add(OFFLINE);
@@ -42,6 +44,27 @@ export default memo(
         };
       }
     }, []);
+    const viewportWidth = globalThis.innerWidth;
+  const [ isMobile, setisMobile ] = useState(true);
+  const [rightPoint,setRightPoint] = useState(-100)
+  const rightPointz = () => {
+    if(rightPoint == -100){
+      setRightPoint(0.1)
+    } else {
+      setRightPoint(-100)
+    }
+  }
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(
+        process.env.serviceWorkerUrl as string,
+        { scope: '/' }
+      );
+    }
+    if (viewportWidth > 768){
+      setisMobile(false);
+    }
+  }, []);
 
     return (
       <>
@@ -55,11 +78,12 @@ export default memo(
         <header className={ header }>
           <nav>
             <div className={ headerControls }>
-              <BackButton />
-              <Logo />
               <ThemeToggler />
+              { isMobile ? <button className={ styles.button } type="submit" onClick={ () => rightPointz() }>
+                {rightPoint == -100 ? <div className={styles.hamburger}></div> : <div className={ styles.ex}></div>}
+              </button> : ""}
             </div>
-            <Items />
+            {isMobile ? <div className={mobilenav} style={{right: `${rightPoint}%`}}><Items/></div>: <Items/>}
           </nav>
         </header>
       </>

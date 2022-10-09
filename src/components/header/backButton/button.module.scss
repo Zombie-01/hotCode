@@ -1,7 +1,32 @@
 @use 'styles/variables/media';
 @use 'styles/variables/theme';
 .button {
-    padding: 10px;
-    border-radius: 50%;
-    border: 1px solid var(--border)
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+}
+.hamburger{
+    width: 30px;
+    height: 3px;
+    position: relative;
+    background-color: var(--primary-text-color);
+    &::after{
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: 0;
+        height: 3px;
+        width: 30px;
+        background-color: var(--primary-text-color);
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        bottom: -12px;
+        left: 0;
+        background-color: var(--primary-text-color);
+
+    }
 }

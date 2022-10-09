@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'components/image';
@@ -13,6 +13,16 @@ const {
 } = styles;
 
 export default function Landing(): JSX.Element {
+  const myref = useRef(null)
+  const [ x, setX ] = useState()
+  useEffect(() => {
+    getPosition();
+  }, []);
+  const getPosition = () => {
+  }
+  const y = myref.current.offset();
+  console.log(y)
+  
   return (
     <>
       <Head>
@@ -28,7 +38,7 @@ export default function Landing(): JSX.Element {
             </p>
           </div>
           <div className={ landingNavigationWrapper }>
-            <Link href="/donate">Хандив өгөх</Link>
+            <div ref={myref} ><Link href="/donate">Хандив өгөх</Link></div>
             <p>Таний багахан тус таны тусламж хамгийн их хэрэгтэй байгаа хүнд очих болно</p>
           </div>
           <Image

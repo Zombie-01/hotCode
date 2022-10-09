@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import ThemeToggler from 'components/header/themeToggler';
 import { injectClassNames } from 'utils/css';
 import styles from './Items.module.scss';
 
